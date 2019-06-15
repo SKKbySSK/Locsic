@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35AE81F045443D2559A437ED /* Pods_Locsic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5C0EBEA8828698F54F06E9 /* Pods_Locsic.framework */; };
 		7368CA2522B542D600DC31DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368CA2422B542D600DC31DA /* AppDelegate.swift */; };
 		7368CA2E22B542D800DC31DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7368CA2D22B542D800DC31DA /* Assets.xcassets */; };
 		7368CA3122B542D800DC31DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7368CA2F22B542D800DC31DA /* LaunchScreen.storyboard */; };
@@ -18,6 +19,9 @@
 		7368CA2D22B542D800DC31DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7368CA3022B542D800DC31DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7368CA3222B542D800DC31DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3AA948669DBD7B38EAB1BC /* Pods-Locsic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locsic.release.xcconfig"; path = "Target Support Files/Pods-Locsic/Pods-Locsic.release.xcconfig"; sourceTree = "<group>"; };
+		C3C254D24E34729B23595ABC /* Pods-Locsic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locsic.debug.xcconfig"; path = "Target Support Files/Pods-Locsic/Pods-Locsic.debug.xcconfig"; sourceTree = "<group>"; };
+		EF5C0EBEA8828698F54F06E9 /* Pods_Locsic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locsic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35AE81F045443D2559A437ED /* Pods_Locsic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +41,8 @@
 			children = (
 				7368CA2322B542D600DC31DA /* Locsic */,
 				7368CA2222B542D600DC31DA /* Products */,
+				F7E68EA869D5E46D856B3515 /* Pods */,
+				D675AAF815949D1FB12E9575 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +65,24 @@
 			path = Locsic;
 			sourceTree = "<group>";
 		};
+		D675AAF815949D1FB12E9575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF5C0EBEA8828698F54F06E9 /* Pods_Locsic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7E68EA869D5E46D856B3515 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3C254D24E34729B23595ABC /* Pods-Locsic.debug.xcconfig */,
+				BB3AA948669DBD7B38EAB1BC /* Pods-Locsic.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +90,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7368CA3522B542D800DC31DA /* Build configuration list for PBXNativeTarget "Locsic" */;
 			buildPhases = (
+				B15F2E8BDC0CD40BB6A3DFEC /* [CP] Check Pods Manifest.lock */,
 				7368CA1D22B542D600DC31DA /* Sources */,
 				7368CA1E22B542D600DC31DA /* Frameworks */,
 				7368CA1F22B542D600DC31DA /* Resources */,
+				CAE27F573E3B06A27BB8F46A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +149,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B15F2E8BDC0CD40BB6A3DFEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Locsic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE27F573E3B06A27BB8F46A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locsic/Pods-Locsic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locsic/Pods-Locsic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Locsic/Pods-Locsic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7368CA1D22B542D600DC31DA /* Sources */ = {
@@ -262,6 +331,7 @@
 		};
 		7368CA3622B542D800DC31DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C254D24E34729B23595ABC /* Pods-Locsic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -280,6 +350,7 @@
 		};
 		7368CA3722B542D800DC31DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB3AA948669DBD7B38EAB1BC /* Pods-Locsic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
