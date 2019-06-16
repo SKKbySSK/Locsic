@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		7368CA2522B542D600DC31DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368CA2422B542D600DC31DA /* AppDelegate.swift */; };
 		7368CA2E22B542D800DC31DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7368CA2D22B542D800DC31DA /* Assets.xcassets */; };
 		7368CA3122B542D800DC31DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7368CA2F22B542D800DC31DA /* LaunchScreen.storyboard */; };
+		7368CA3A22B54ACB00DC31DA /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368CA3922B54ACB00DC31DA /* TabViewController.swift */; };
+		7368CA3C22B54B8E00DC31DA /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7368CA3B22B54B8E00DC31DA /* MapViewController.xib */; };
+		7368CA3E22B54B9B00DC31DA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368CA3D22B54B9B00DC31DA /* MapViewController.swift */; };
+		73A3E02922B6685000102270 /* WaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3E02822B6685000102270 /* WaveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		7368CA2D22B542D800DC31DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7368CA3022B542D800DC31DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7368CA3222B542D800DC31DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7368CA3922B54ACB00DC31DA /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		7368CA3B22B54B8E00DC31DA /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		7368CA3D22B54B9B00DC31DA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		73A3E02822B6685000102270 /* WaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
 		BB3AA948669DBD7B38EAB1BC /* Pods-Locsic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locsic.release.xcconfig"; path = "Target Support Files/Pods-Locsic/Pods-Locsic.release.xcconfig"; sourceTree = "<group>"; };
 		C3C254D24E34729B23595ABC /* Pods-Locsic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locsic.debug.xcconfig"; path = "Target Support Files/Pods-Locsic/Pods-Locsic.debug.xcconfig"; sourceTree = "<group>"; };
 		EF5C0EBEA8828698F54F06E9 /* Pods_Locsic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locsic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,12 +65,24 @@
 		7368CA2322B542D600DC31DA /* Locsic */ = {
 			isa = PBXGroup;
 			children = (
+				7368CA3822B54A0000DC31DA /* ViewController */,
 				7368CA2422B542D600DC31DA /* AppDelegate.swift */,
 				7368CA2D22B542D800DC31DA /* Assets.xcassets */,
 				7368CA2F22B542D800DC31DA /* LaunchScreen.storyboard */,
 				7368CA3222B542D800DC31DA /* Info.plist */,
 			);
 			path = Locsic;
+			sourceTree = "<group>";
+		};
+		7368CA3822B54A0000DC31DA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7368CA3922B54ACB00DC31DA /* TabViewController.swift */,
+				7368CA3B22B54B8E00DC31DA /* MapViewController.xib */,
+				7368CA3D22B54B9B00DC31DA /* MapViewController.swift */,
+				73A3E02822B6685000102270 /* WaveViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		D675AAF815949D1FB12E9575 /* Frameworks */ = {
@@ -79,7 +99,6 @@
 				C3C254D24E34729B23595ABC /* Pods-Locsic.debug.xcconfig */,
 				BB3AA948669DBD7B38EAB1BC /* Pods-Locsic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7368CA3122B542D800DC31DA /* LaunchScreen.storyboard in Resources */,
+				7368CA3C22B54B8E00DC31DA /* MapViewController.xib in Resources */,
 				7368CA2E22B542D800DC31DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7368CA3A22B54ACB00DC31DA /* TabViewController.swift in Sources */,
+				73A3E02922B6685000102270 /* WaveViewController.swift in Sources */,
+				7368CA3E22B54B9B00DC31DA /* MapViewController.swift in Sources */,
 				7368CA2522B542D600DC31DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -319,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -334,15 +357,18 @@
 			baseConfigurationReference = C3C254D24E34729B23595ABC /* Pods-Locsic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24GETZ4LG8;
 				INFOPLIST_FILE = Locsic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = work.ksprogram.Locsic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,15 +379,18 @@
 			baseConfigurationReference = BB3AA948669DBD7B38EAB1BC /* Pods-Locsic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24GETZ4LG8;
 				INFOPLIST_FILE = Locsic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = work.ksprogram.Locsic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

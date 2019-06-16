@@ -10,4 +10,5 @@ target 'Locsic' do
   pod 'XLPagerTabStrip'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxCoreLocation'
 end
