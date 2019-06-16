@@ -12,12 +12,20 @@ import RxSwift
 import AudioKit
 
 protocol SoundGeneratable {
-    var setOutput: Observable<AKNode>
+    var setOutput: Observable<AKNode> { get; }
 }
 
 class TabViewController: TwitterPagerTabStripViewController {
+    let mapViewController = MapViewController()
+    let waveViewController = WaveViewController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        waveViewController.soundGenerator = mapViewController
+    }
+    
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [MapViewController()]
+        return [mapViewController, waveViewController]
     }
 }
 
